@@ -1,0 +1,46 @@
+#!/usr/bin/env node
+
+require('coffee-script').register();
+
+var program = require('commander');
+var builder = require('../src/builder');
+var utils = require('../src/utils');
+
+program
+  .version('0.0.1')
+  .option('-c --count', 'total count')
+  .option('-f --first', 'returns first item in array')
+  .option('-k --keys', 'returns list of keys for an object')
+  .option('-l --last', 'returns last item in array')
+  .option(
+    '-p --pluck <names>', 
+    'pluck property (comma separated) names from collection',
+    utils.json
+  )
+  .option('-s --sortBy <name>', 'sort by property name')
+  .option('-S --sortByDesc <name>', 'sort by descending property name')
+  .option('-w --where <query>', 'object where clause', utils.toJson)
+  .parse(process.argv);
+
+process.stdin.resume();
+process.stdin.setEncoding('utf8');
+
+var data = '';
+
+process.stdin.on('data', function(chunk) {
+  data += chunk;
+});
+
+process.stdin.on('end', function() {
+  var json = null;
+  try {
+    json = utils.toJson(data);
+  } catch(e) {
+    console.log('Input is not valid json (%s)', e.message);
+    process.exit(1);
+  }
+
+  var result = builder.exec(json, program);
+  var output = JSON.stringify(result);
+  console.log(output);
+});
