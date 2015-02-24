@@ -5,6 +5,9 @@ used when making API calls with `curl` that return JSON.
 
 Quick examples:
 
+Update: Pull requests default to Open by default so this example is not the
+best, but you ge the idea. I'll update this soon hopefully, maybe, probably
+not.
 ```bash
 # Get all tag names for rails repository
 curl https://api.github.com/repos/rails/rails/tags | jeep -p "name"
