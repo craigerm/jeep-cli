@@ -16,7 +16,7 @@ curl https://api.github.com/repos/rails/rails/tags | jeep -c
 curl https://api.github.com/repos/rails/rails/pulls | jeep -w '{state: "Open"}'
 
 # Get count of all open pull requests
- curl https://api.github.com/repos/rails/rails/pulls | jeep -w '{state: "Open"}' -c
+curl https://api.github.com/repos/rails/rails/pulls | jeep -w '{state: "Open"}' -c
 ```
 
 ## Installation
