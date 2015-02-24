@@ -1,0 +1,33 @@
+{
+  "name": "jeep-cli",
+  "version": "0.0.1",
+  "description": "A command line tool to filter, sort, and process json text. Useful when making API calls via curl",
+  "main": "./bin/jeep",
+  "scripts": {
+    "test": "jasmine-node --coffee --captureExceptions spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigerm/jeep-cli"
+  },
+  "keywords": [
+    "json",
+    "filter",
+    "cli"
+  ],
+  "author": "Craig MacGregor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/craigerm/jeep-cli/issues"
+  },
+  "homepage": "https://github.com/craigerm/jeep-cli",
+  "dependencies": {
+    "coffee-script": "^1.9.1",
+    "commander": "^2.6.0",
+    "underscore": "^1.8.2"
+  },
+  "devDependencies": {
+    "jasmine-expect": "^2.0.0-beta1",
+    "jasmine-node": "^1.14.5"
+  }
+}
