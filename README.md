@@ -94,7 +94,7 @@ curl https://api.github.com/repos/rails/rails/pulls | jeep  -s "title" | pjson
 ```
 
 ## The name JEEP?
-Json Eliminater, Editor and Processor...ok that's not really true. I just wanted a three or four letter name that started with J. And all the good ones are taken :Smiley:.
+Json Eliminater, Editor and Processor...ok that's not really true. I just wanted a three or four letter name that started with J. And all the good ones are taken of course...
 
 ## License
 
