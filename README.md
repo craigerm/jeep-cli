@@ -24,7 +24,7 @@ curl https://api.github.com/repos/rails/rails/pulls | jeep -w '{state: "Open"}' 
 
 ## Installation
 ```bash
-npm install -g jeep
+npm install -g jeep-cli
 ```
 
 ## Documentation
