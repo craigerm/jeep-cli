@@ -15,7 +15,7 @@ program
   .option(
     '-p --pluck <names>', 
     'pluck property (comma separated) names from collection',
-    utils.json
+    utils.list
   )
   .option('-s --sortBy <name>', 'sort by property name')
   .option('-S --sortByDesc <name>', 'sort by descending property name')

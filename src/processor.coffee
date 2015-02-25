@@ -10,7 +10,8 @@ processor =
   sortByDesc: (data, name) -> @sortBy(data,name).reverse()
 
   pluck: (arr, keys) ->
-    return _.pluck(arr, keys) unless keys instanceof Array
+    return _.pick(arr, keys) unless _.isArray(arr)
+    return _.pluck(arr, keys) unless keys.length > 1
     _.map arr, (obj) -> _.pick(obj, keys)
 
   count: (c) ->
