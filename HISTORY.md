@@ -1,3 +1,7 @@
+0.0.4 / 2015-02-25
+==================
+* Fix issue with showing the correct version
+
 0.0.3 / 2015-02-25
 ==================
 * Fix pluck so it can work with objects and not just arrays
