@@ -1,6 +1,6 @@
 {
   "name": "jeep-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A command line tool to filter, sort, and process json text. Useful when making API calls via curl",
   "bin": {
      "jeep": "./bin/jeep"
