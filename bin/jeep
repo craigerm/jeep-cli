@@ -5,9 +5,10 @@ require('coffee-script').register();
 var program = require('commander');
 var builder = require('../src/builder');
 var utils = require('../src/utils');
+var pjson = require('../package.json');
 
 program
-  .version('0.0.1')
+  .version(pjson.version)
   .option('-c --count', 'total count')
   .option('-f --first', 'returns first item in array')
   .option('-k --keys', 'returns list of keys for an object')
